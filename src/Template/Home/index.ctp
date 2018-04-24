@@ -6,7 +6,7 @@
 <main>
 	<div class="container">
 		<div class="col-12">
-			<h1>Eurovision 2017 in the Cronx</h1>
+			<h1>Eurovision <?php echo date("Y"); ?></h1>
 			<p>Vote along below!</p>
 			<table class="table table-striped">
 			  <thead>
@@ -19,8 +19,8 @@
 			    </tr>
 			  </thead>
 			  <tbody>
-			<?php 
-			foreach ($voterecord as $vote){ 
+			<?php
+			foreach ($voterecord as $vote){
 				$average_score = 0;
 			?>
 				<tr>
@@ -54,7 +54,7 @@
 					</td>
 				</tr>
 			<?PHP
-			}	
+			}
 			?>
 			  </tbody>
 			</table>

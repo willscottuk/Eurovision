@@ -3,10 +3,10 @@
 
         <!--Slides-->
         <div class="carousel-inner" role="listbox">
-	        
+
 
             <!-- First slide -->
-            <div class="carousel-item active view hm-black-strong" style="background-image: url('https://kiev.willscott.org/img/backgrounds/<?php echo $countries[0]['flag']; ?>.jpeg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="carousel-item active view hm-black-strong" style="background-image: url('/img/backgrounds/<?php echo $countries[0]['flag']; ?>.jpeg'); background-repeat: no-repeat; background-size: cover;">
 
                 <!-- Caption -->
                 <div class="full-bg-img flex-center white-text">
@@ -23,7 +23,7 @@
                         <li>
                             <h2>Here are some of the comments!</h2>
                         </li>
-                        
+
 						<?PHP } ?>
                     </ul>
                 </div>
@@ -33,9 +33,9 @@
             <!-- /.First slide -->
 
 			<?PHP foreach ($votecomments as $comment) { ?>
-			
+
             <!-- Comment slide -->
-            <div class="carousel-item view hm-black-strong" style="background-image: url('https://kiev.willscott.org/img/backgrounds/<?php echo $countries[0]['flag']; ?>.jpeg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="carousel-item view hm-black-strong" style="background-image: url('/img/backgrounds/<?php echo $countries[0]['flag']; ?>.jpeg'); background-repeat: no-repeat; background-size: cover;">
 
                 <!-- Caption -->
                 <div class="full-bg-img flex-center white-text">
@@ -49,11 +49,11 @@
 
             </div>
             <!-- /.Comment slide -->
-			
+
 			<?PHP } ?>
-			
+
             <!-- Final slide -->
-            <div class="carousel-item view hm-black-strong" style="background-image: url('https://kiev.willscott.org/img/backgrounds/<?php echo $countries[0]['flag']; ?>.jpeg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="carousel-item view hm-black-strong" style="background-image: url('/img/backgrounds/<?php echo $countries[0]['flag']; ?>.jpeg'); background-repeat: no-repeat; background-size: cover;">
 				<?php $average=round((($scores[0]['ave_staging'] + $scores[0]['ave_song'] + $scores[0]['ave_singer'] + $scores[0]['ave_overall']) /4),1); ?>
                 <!-- Caption -->
                 <div class="full-bg-img flex-center white-text">
@@ -82,7 +82,7 @@
 
             </div>
             <!-- /.Final slide -->
-            
+
         </div>
         <!--/.Slides-->
 

@@ -12,13 +12,13 @@
         <div class="carousel-inner" role="listbox">
 
             <!-- First slide -->
-            <div class="carousel-item active view hm-black-strong" style="background-image: url('https://kiev.willscott.org/img/arena.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="carousel-item active view hm-black-strong" style="background-image: url('/img/arena.jpg'); background-repeat: no-repeat; background-size: cover;">
 
                 <!-- Caption -->
                 <div class="full-bg-img flex-center white-text">
                     <ul class="animated fadeInUp col-md-12">
                         <li>
-                            <h1 class="h1-responsive flex-item">Welcome to Eurovision 2017</h1>
+                            <h1 class="h1-responsive flex-item">Welcome to Eurovision <?php echo date("Y"); ?></h1>
                         </li>
                         <li>
                             <h1 class="h1-responsive">Live from Kiev, Ukraine</h1>
@@ -40,7 +40,7 @@
                             <h1 class="h1-responsive flex-item">Log into wifi:</h1>
                         </li>
                         <li>
-                            <h1 class="h1-responsive">Network: WANDLE <br /> Password: lambethbridge</h1>
+                            <h1 class="h1-responsive">Network: ---NETWRK--- <br /> Password: --PASSWORD HERE --</h1>
                         </li>
                     </ul>
                 </div>
@@ -50,7 +50,7 @@
             <!-- /.Second slide -->
 
             <!-- Third slide -->
-            <div class="carousel-item view hm-black-strong" style="background-image: url('https://kiev.willscott.org/img/backgrounds/GB.jpeg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="carousel-item view hm-black-strong" style="background-image: url('/img/backgrounds/GB.jpeg'); background-repeat: no-repeat; background-size: cover;">
 
                 <!-- Caption -->
                 <div class="full-bg-img flex-center white-text">
@@ -59,7 +59,7 @@
                             <h1 class="h1-responsive flex-item">Register to vote at:</h1>
                         </li>
                         <li>
-                            <h1 class="h1-responsive">https://kiev.willscott.org</h1>
+                            <h1 class="h1-responsive">/</h1>
                         </li>
                     </ul>
                 </div>
@@ -67,7 +67,7 @@
 
             </div>
             <!-- /.Third slide -->
-            
+
         </div>
         <!--/.Slides-->
 

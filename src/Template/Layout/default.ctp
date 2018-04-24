@@ -25,57 +25,57 @@ $cakeDescription = 'Eurovision 2017';
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
-   
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
 
     <?= $this->Html->css('bootstrap.min.css') ?>
     <?= $this->Html->css('mdb.min.css') ?>
-    
+
     <style rel="stylesheet">
         /* TEMPLATE STYLES */
-        
+
         html,
         body,
         .view {
             height: 100%;
         }
-        
+
         main {
 	        margin-top: 3rem;
         }
-        
+
         /* Navigation*/
-        
+
         .navbar {
             background-color: #1C2331;
         }
-        
+
         .scrolling-navbar {
             -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
             -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
             transition: background .5s ease-in-out, padding .5s ease-in-out;
         }
-        
+
         .top-nav-collapse {
             background-color: #1C2331;
         }
-        
+
         footer.page-footer {
            background-color: #1C2331;
             margin-top: -1px;
         }
-        
+
         @media only screen and (max-width: 768px) {
             .navbar {
                 background-color: #1C2331;
             }
         }
         /*Call to action*/
-        
+
         .flex-center {
         }
-        
+
         .view {
             background: url("https://kiev.willscott.org/img/arena.jpg")no-repeat center center fixed;
             -webkit-background-size: cover;
@@ -83,24 +83,24 @@ $cakeDescription = 'Eurovision 2017';
             -o-background-size: cover;
             background-size: cover;
         }
-        
+
         /* Carousel*/
-        
+
         .carousel,
         .carousel-item,
         .active {
             height: 100%;
         }
-        
+
         .carousel .h1-responsive {
 	        font-size: 400%;
         }
-        
+
         .carousel-inner {
             height: 100%;
         }
         /*Caption*/
-        
+
         @media (min-width: 776px) {
             .carousel .view ul li {
                 display: inline;
@@ -125,20 +125,20 @@ $cakeDescription = 'Eurovision 2017';
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="#">
-                <strong>Eurovision 2017</strong>
+                <strong>Eurovision <?php echo date("Y"); ?></strong>
             </a>
             <div class="collapse navbar-collapse" id="navbarNav1">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://kiev.willscott.org">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://kiev.willscott.org/pages/about">About</a>
+                        <a class="nav-link" href="/pages/about">About</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://kiev.willscott.org/users/logout">Logout</a>
+                        <a class="nav-link" href="/users/logout">Logout</a>
                     </li>
                 </ul>
 
@@ -154,15 +154,15 @@ $cakeDescription = 'Eurovision 2017';
     <footer>
 	    <?= $this->Flash->render() ?>
     </footer>
-    
+
      <?= $this->Html->script('jquery-2.2.3.min.js') ?>
      <?= $this->Html->script('tether.min.js') ?>
-     <?= $this->Html->script('bootstrap.min.js') ?> 
+     <?= $this->Html->script('bootstrap.min.js') ?>
      <?= $this->Html->script('mdb.min.js') ?>
-     
+
     <script>
     new WOW().init();
     </script>
-   
+
 </body>
 </html>

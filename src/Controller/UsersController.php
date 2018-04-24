@@ -63,6 +63,30 @@ class UsersController extends AppController
     }
 
     /**
+     * Register method
+     *
+     * @return \Cake\Network\Response|null Redirects on successful add, renders view otherwise.
+     */
+    public function register()
+    {
+        $user = $this->Users->newEntity();
+        if ($this->request->is('post')) {
+            $user = $this->Users->patchEntity($user, $this->request->getData());
+            if ($result = $this->Users->save($user)) {
+
+              $authUser = $this->Users->get($result->id)->toArray();
+  		        // Log user in using Auth
+  		        $this->Auth->setUser($authUser);
+
+              $this->Flash->success(__('Account Created!'));
+            }
+            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+        }
+        $this->set(compact('user'));
+        $this->set('_serialize', ['user']);
+    }
+
+    /**
      * Edit method
      *
      * @param string|null $id User id.
@@ -122,22 +146,22 @@ class UsersController extends AppController
 	    parent::initialize();
 		$this->Auth->allow(['logout', 'add']);
 	}
-	
+
 	public function logout()
 	{
 	    $this->Flash->success('You are now logged out.');
 	    return $this->redirect($this->Auth->logout());
 	}
-	
+
 	public function isAuthorized($user)
 	{
 	    $action = $this->request->getParam('action');
-	
+
 	    // The add and index actions are always allowed.
 	    if (in_array($action, ['add', 'tags'])) {
 	        return true;
 	    }
-	
+
 	    // Check that the bookmark belongs to the current user.
 	    $id = $this->request->getParam('pass.0');
 	    if ("1" == $user['id']) {
