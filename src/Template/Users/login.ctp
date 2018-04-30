@@ -27,7 +27,7 @@
     <!--Footer-->
     <div class="modal-footer">
         <div class="options">
-            <p>Not yet registered? <a href="/users/add">Sign Up</a></p>
+            <p>Not yet registered? <a href="/users/register">Sign Up</a></p>
 
 </div>
     </div>
