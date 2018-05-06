@@ -1,4 +1,3 @@
-<?php print_r($settings); ?>
 <!--Carousel Wrapper-->
 <div id="carousel-example-3" class="carousel slide carousel-fade white-text" data-ride="carousel" data-interval="8000">
     <!--Indicators-->
@@ -19,10 +18,10 @@
             <div class="full-bg-img flex-center white-text">
                 <ul class="animated fadeInUp col-md-12">
                     <li>
-                        <h1 class="h1-responsive flex-item">Welcome to Eurovision <?php echo date("Y"); ?></h1>
+                        <h1 class="h1-responsive flex-item">Welcome to Eurovision <?php echo $settings['year']; ?></h1>
                     </li>
                     <li>
-                        <h1 class="h1-responsive">Live from Kiev, Ukraine</h1>
+                        <h1 class="h1-responsive">Live from <?php echo $settings['city']; ?>, <?php echo $settings['country']; ?></h1>
                     </li>
                 </ul>
             </div>
@@ -41,7 +40,7 @@
                         <h1 class="h1-responsive flex-item">Log into wifi:</h1>
                     </li>
                     <li>
-                        <h1 class="h1-responsive">Network: ---NETWRK--- <br /> Password: --PASSWORD HERE --</h1>
+                        <h1 class="h1-responsive">Network: <?php echo $settings['wifi']; ?> <br /> Password: <?php echo $settings['password']; ?></h1>
                     </li>
                 </ul>
             </div>
@@ -60,7 +59,7 @@
                         <h1 class="h1-responsive flex-item">Register to vote at:</h1>
                     </li>
                     <li>
-                        <h1 class="h1-responsive">/</h1>
+                        <h1 class="h1-responsive"><?php echo $settings['url']; ?>/register</h1>
                     </li>
                 </ul>
             </div>
