@@ -61,7 +61,7 @@ class ControlController extends AppController
 
         if ($country_id == 0) {
 
-          $stmt2 = $conn->execute("INSERT INTO control (country, mode) VALUES (1, 1);");
+          $stmt2 = $conn->execute("INSERT INTO control (country, mode) VALUES (1, 1)");
 
         }
 
@@ -69,7 +69,7 @@ class ControlController extends AppController
 
         elseif ($mode == 1) {
 
-          $stmt2 = $conn->execute("INSERT INTO control (country, mode) VALUES (".$country_id.", 2);");
+          $stmt2 = $conn->execute("INSERT INTO control (country, mode) VALUES (".$country_id.", 2)");
 
         }
 
@@ -79,7 +79,7 @@ class ControlController extends AppController
 
         $next_country = $country_id + 1;
 
-        $stmt2 = $conn->execute("INSERT INTO control (country, mode) VALUES (".$next_country.", 1);");
+        $stmt2 = $conn->execute("INSERT INTO control (country, mode) VALUES (".$next_country.", 1)");
 
       }
 
