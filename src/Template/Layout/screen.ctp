@@ -61,7 +61,7 @@ $cakeDescription = 'Eurovision';
         background-color: rgba(51,51,51,0.7);
         }
 
-        h2.scores {
+        .scores {
           color: #fff;
         }
 
