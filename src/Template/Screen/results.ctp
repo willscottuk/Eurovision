@@ -46,7 +46,7 @@
     <!--/.Controls-->
 </div>
 <!--/.Carousel Wrapper-->
-<?php if (empty($votecomments)) {
+<?php if (empty($comments)) {
 
 }
 else { ?>
