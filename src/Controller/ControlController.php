@@ -43,7 +43,7 @@ class ControlController extends AppController
         # Return current state
         $this->set(compact('data'));
         $this->set('_serialize', ['data']);
-        $this->viewBuilder()->setLayout('ajax')
+        $this->viewBuilder()->setLayout('ajax');
         $this->render();
 
     }
