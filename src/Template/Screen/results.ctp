@@ -11,24 +11,20 @@
             <div class="full-bg-img flex-center white-text">
                 <ul class="animated fadeInUp col-md-12">
                     <li>
-                        <h1 class="h1-responsive flex-item"><?php echo $countrydetails['name']?></h1>
+                        <h1 class="h1-responsive flex-item"><?php echo $countrydetails['name']?>: <?php echo $average?></h1>
                     </li>
-                    <li>
-                        <h1 class="h1-responsive">Overall: <?php echo $average?></h1>
-                    </li>
-                    <li>
-                        <br />
-                        <h1 class="h1-responsive">Staging: <strong><?php echo $scores['ave_staging']; ?></strong></h1>
-                    </li>
-                    <li>
-                        <h1 class="h1-responsive">Song: <strong><?php echo $scores['ave_song']; ?></strong></h1>
-                    </li>
-                    <li>
-                        <h1 class="h1-responsive">Singer: <strong><?php echo $scores['ave_singer']; ?></strong></h1>
-                    </li>
-                    <li>
-                        <h1 class="h1-responsive">Performance: <strong><?php echo $scores['ave_overall']; ?></strong></h1>
-                    </li>
+                    <?php if (empty($comments)) {
+
+                    }
+                    else { ?>
+                      <?php foreach ($comments as $comment) { ?>
+                      <li>
+                          <h3 class="h1-responsive"><?php echo $comment['comments']; ?></h3>
+                      </li>
+                    <?php
+                    }
+                    }
+                    ?>
                 </ul>
             </div>
             <!-- /.Caption -->
@@ -51,12 +47,8 @@
     <!--/.Controls-->
 </div>
 <!--/.Carousel Wrapper-->
-<?php if (empty($comments)) {
-
-}
-else { ?>
 <div class="footer">
-  <h1 class="comments">Comments: <?php foreach ($comments as $comment) { echo $comment['comments'];} ?></h3>
+  <h2 class="scores">Staging: <strong><?php echo $scores['ave_staging']; ?></strong>  Song: <strong><?php echo $scores['ave_song']; ?></strong>  Singer: <strong><?php echo $scores['ave_singer']; ?></strong>  Performance: <strong><?php echo $scores['ave_overall']; ?></strong></h2>
 </div>
 <?php
 }
@@ -126,5 +118,5 @@ else { ?>
     };
 })(jQuery);
 
-$('.comments').marquee({ speed: 5, count: 1});
+$('.scores').marquee({ speed: 5, count: 1});
 </script>
