@@ -19,7 +19,7 @@
                     else { ?>
                       <?php foreach ($comments as $comment) { ?>
                       <li>
-                          <h4 class="h4-responsive"><?php echo $comment['comments']; ?></h4>
+                          <h3 class="h3-responsive"><?php echo $comment['comments']; ?></h3>
                       </li>
                     <?php
                     }
