@@ -77,8 +77,10 @@ class ControlController extends AppController
 
       elseif ($mode == 2) {
 
-        $stmt2 = $conn->execute("INSERT INTO control (country, mode) VALUES (".$country_id + 1.", 1);");
-        
+        $next_country = $country_id + 1;
+
+        $stmt2 = $conn->execute("INSERT INTO control (country, mode) VALUES (".$next_country.", 1);");
+
       }
 
 
