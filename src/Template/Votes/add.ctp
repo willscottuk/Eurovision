@@ -34,7 +34,8 @@
 					        ?>
 											<div class="input textarea">
 												<label for="comments">Comments</label>
-												<input type="text "name="comments" id="comments" maxlength="50">
+												<br />
+												<input type="text "name="comments" id="comments" maxlength="50" class="form-control">
 												<br>
 												<font size="1">(Maximum characters: 50)</font>
 											</div>
