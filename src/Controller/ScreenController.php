@@ -66,9 +66,17 @@ class ScreenController extends AppController
 
         elseif ($country_id > 0 && $mode == 2) {
 
+          $stmt4 = $conn->execute("SELECT votes.comments FROM `countries` LEFT JOIN `votes` ON votes.country_id = countries.id AND votes.comments<>'' WHERE countries.position = ".$country_id." AND votes.comments IS NOT NULL ORDER BY votes.modified ASC");
+      		$comments = $stmt4->fetchAll('assoc');
 
-          $this->set(compact('modearray', 'settings'));
-          $this->set('_serialize', ['modearray', 'settings']);
+      		$stmt5 = $conn->execute("SELECT ROUND( AVG(votes.overall_score),1 ) as ave_overall, ROUND( AVG(votes.song_score),1 ) as ave_song, ROUND( AVG(votes.singer_score),1 ) as ave_singer, ROUND( AVG(votes.staging_score),1 ) as ave_staging FROM `countries` LEFT JOIN `votes` ON votes.country_id = countries.id WHERE countries.position = ".$country_id." ORDER BY position ASC");
+      		$scores = $stmt5->fetchAll('assoc');
+
+      		$stmt6 = $conn->execute("SELECT * FROM `countries` WHERE position = ".$country_id." ORDER BY position ASC");
+      		$countrydetails = $stmt6->fetchAll('assoc');
+
+          $this->set(compact('modearray', 'settings', 'comments', 'scores', 'countrydetails'));
+          $this->set('_serialize', ['modearray', 'settings', 'comments', 'scores', 'countrydetails']);
           $this->viewBuilder()->setLayout('screen');
           $this->render('results');
 
