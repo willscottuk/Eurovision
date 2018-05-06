@@ -22,6 +22,7 @@
                         <h1 class="h1-responsive"><?php echo $countrydetails['song']?> by <?php echo $countrydetails['artist']?></h1>
                     </li>
                     <li>
+                        <br />
                         <h1 class="h1-responsive"><div class="countdown"></div></h1>
                     </li>
                 </ul>
