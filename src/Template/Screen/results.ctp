@@ -8,9 +8,9 @@
 <!--Carousel Wrapper-->
 <div id="carousel-example-3" class="carousel slide carousel-fade white-text" data-ride="carousel" data-interval="8000">
     <!--Indicators-->
-    <ol class="carousel-indicators">
-        <li data-target="#carousel-example-3" data-slide-to="0" class="active"></li>
-    </ol>
+    <div class="carousel-indicators" style="width: 100%; background-color:#FFF;">
+        HELLO! THIS IS THE CAROUSEL
+    </div>
     <!--/.Indicators-->
 
     <!--Slides-->
