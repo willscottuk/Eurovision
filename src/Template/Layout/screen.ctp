@@ -130,9 +130,9 @@ $cakeDescription = 'Eurovision';
 </head>
 <body>
 	<header>
-    // No NavBar
+    <!-- No NavBar -->
 	</header>
-  <div class="#counter" data-counter="<?php echo $modearray['id']; ?>">
+  <div id="counter" data-counter="<?php echo $modearray['id']; ?>">
         <?= $this->fetch('content') ?>
     </div>
     </div>
