@@ -26,7 +26,7 @@ class ControlController extends AppController
       $stmt = $conn->execute("SELECT * from control ORDER BY id DESC LIMIT 1");
       $mode = $stmt->fetchAll('assoc');
 
-      return(print_r($mode););
+      return(print_r($mode));
 
         # Return current state
 
