@@ -8,12 +8,12 @@
 		<div class="col-12">
 			<div class="card" style="min-width: 30%;">
 			    <div class="card-block">
-			
+
 			        <!--Header-->
 			        <div class="form-header primary-color">
 			            <h3><i class="fa fa-star"></i>  Rate the act</h3>
 			        </div>
-			
+
 			        <!--Body-->
 
 					    <?= $this->Form->create($vote) ?>
@@ -31,8 +31,14 @@
 					            echo $this->Form->select('singer_score', $options, ['class' => 'form-control', 'empty' => true]);
 					            echo $this->Form->label('staging_score', 'Staging score (/12)');
 					            echo $this->Form->select('staging_score', $options, ['class' => 'form-control', 'empty' => true]);
-					            echo $this->Form->control('comments');
 					        ?>
+											<div class="input textarea">
+												<label for="comments">Comments</label>
+												<textarea onKeyDown="limitText(this.form.limitedtextarea,this.form.countdown,50);" onKeyUp="limitText(this.form.limitedtextarea,this.form.countdown,50);" name="comments" id="comments" rows="5">
+												</textarea>
+												<br>
+												<font size="1">(Maximum characters: 50)<br>You have <input readonly type="text" name="countdown" size="3" value="50"> characters left.</font>
+											</div>
 					    </fieldset>
 					    <?= $this->Form->submit('Vote!', ['class' => 'btn btn-outline-primary waves-effect pull-right']) ?>
 					    <?= $this->Form->end() ?>
@@ -41,3 +47,12 @@
 		</div>
 	</div>
 </main>
+<script language="javascript" type="text/javascript">
+function limitText(limitField, limitCount, limitNum) {
+	if (limitField.value.length > limitNum) {
+		limitField.value = limitField.value.substring(0, limitNum);
+	} else {
+		limitCount.value = limitNum - limitField.value.length;
+	}
+}
+</script>
