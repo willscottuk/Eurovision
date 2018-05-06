@@ -1,18 +1,4 @@
 <?php
-/**
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @since         0.10.0
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
-
 $cakeDescription = 'Eurovision';
 ?>
 <!DOCTYPE html>
@@ -113,49 +99,46 @@ $cakeDescription = 'Eurovision';
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('script') ?>
+    <?= $this->Html->script('jquery-2.2.3.min.js') ?>
+    <script>
+  		/* AJAX request to checker */
+  		function check(){
+  			$.ajax({
+  				type: 'POST',
+  				url: '/control',
+  				dataType: 'json',
+  				data: {
+  					counter:$('#counter').data('counter')
+  				}
+  			}).done(function( response ) {
+  				/* update counter */
+  				$('#counter').data('counter',response.current);
+  				/* check if with response we got a new update */
+  				if(response.update==true){
+  					// $('#message-list').html(response.news);
+            location.reload();
+  				}
+  			});
+  		}
+  		//Every 20 sec check if there is new update
+  		// setInterval(check,20000);
+      //Every 5 sec check if there is new update
+  		setInterval(check,5000);
+  	</script>
 
 
 </head>
 <body>
 	<header>
-    <!--Navbar-->
-    <nav class="navbar navbar-toggleable-md navbar-dark">
-        <div class="container">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="#">
-                <strong>Eurovision <?php echo date("Y"); ?></strong>
-            </a>
-            <div class="collapse navbar-collapse" id="navbarNav1">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/pages/about">About</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/users/logout">Logout</a>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-    </nav>
-    <!--/.Navbar-->
+    // No NavBar
 	</header>
-
+  <div class="#counter" data-counter="<?php echo $modearray['id']; ?>">
         <?= $this->fetch('content') ?>
     </div>
     </div>
     <footer>
 	    <?= $this->Flash->render() ?>
     </footer>
-
-     <?= $this->Html->script('jquery-2.2.3.min.js') ?>
      <?= $this->Html->script('tether.min.js') ?>
      <?= $this->Html->script('bootstrap.min.js') ?>
      <?= $this->Html->script('mdb.min.js') ?>

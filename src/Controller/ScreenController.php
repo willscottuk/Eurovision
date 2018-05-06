@@ -34,6 +34,10 @@ class ScreenController extends AppController
 
         if ($country_id == 0) {
 
+          # Return current state
+          $this->set(compact('modearray'));
+          $this->set('_serialize', ['modearray']);
+          $this->viewBuilder()->setLayout('screen');
           $this->render('loading');
 
         }
@@ -42,9 +46,10 @@ class ScreenController extends AppController
 
         elseif ($country_id > 0 && $mode == 1) {
 
-        $this->set(compact('modearray'));
-        $this->set('_serialize', ['modearray']);
-        $this->render('voting');
+          $this->set(compact('modearray'));
+          $this->set('_serialize', ['modearray']);
+          $this->viewBuilder()->setLayout('screen');
+          $this->render('voting');
 
         }
 
@@ -55,6 +60,7 @@ class ScreenController extends AppController
 
           $this->set(compact('modearray'));
           $this->set('_serialize', ['modearray']);
+          $this->viewBuilder()->setLayout('screen');
           $this->render('results');
 
         }
