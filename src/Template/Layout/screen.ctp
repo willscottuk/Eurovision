@@ -49,7 +49,7 @@ $cakeDescription = 'Eurovision';
 
         footer.page-footer {
            background-color: #1C2331;
-            margin-bottom: -50px;
+            margin-top: -50px;
         }
 
         @media only screen and (max-width: 768px) {
