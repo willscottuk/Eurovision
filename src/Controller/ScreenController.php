@@ -31,7 +31,7 @@ class ScreenController extends AppController
         $settings_indexed = $stmt2->fetchAll('assoc');
         $settings = [];
         foreach ($settings_indexed as $value) {
-            $settings[$value['name']] => $value['value'];
+            $settings[$value['name']] = $value['value'];
         }
         $country_id = $modearray['country'];
         $mode = $modearray['mode'];
