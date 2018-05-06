@@ -28,7 +28,7 @@ class ControlController extends AppController
 
       $country_id = $modearray['country'];
       $mode = $modearray['mode'];
-      return(print($mode);
+      return(print($mode));
 
         # Return current state
 
