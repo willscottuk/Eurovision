@@ -50,9 +50,6 @@
 <div class="footer">
   <h2 class="scores">Staging: <strong><?php echo $scores['ave_staging']; ?></strong>  Song: <strong><?php echo $scores['ave_song']; ?></strong>  Singer: <strong><?php echo $scores['ave_singer']; ?></strong>  Performance: <strong><?php echo $scores['ave_overall']; ?></strong></h2>
 </div>
-<?php
-}
-?>
 <script>
 (function($) {
     $.fn.textWidth = function(){
