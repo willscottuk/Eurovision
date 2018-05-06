@@ -46,6 +46,6 @@
     <!--/.Controls-->
 </div>
 <!--/.Carousel Wrapper-->
-<div class="page-footer">
+<div class="footer">
   FOOOTER
 </div>
