@@ -1,4 +1,3 @@
-<?php print_r($countrydetails); ?>
 <!--Carousel Wrapper-->
 <div id="carousel-example-3" class="carousel slide carousel-fade white-text" data-ride="carousel" data-interval="8000">
     <!--Indicators-->
@@ -17,10 +16,10 @@
             <div class="full-bg-img flex-center white-text">
                 <ul class="animated fadeInUp col-md-12">
                     <li>
-                        <h1 class="h1-responsive flex-item">Voting is open for COUNTRY</h1>
+                        <h1 class="h1-responsive flex-item">Voting is open for <img src="/img/flags-iso/flat/32/<?PHP echo $countrydetails['flag']; ?>.png" alt="<?PHP echo $countrydetails['name']; ?>"/><?php echo $countrydetails['name']?></h1>
                     </li>
                     <li>
-                        <h1 class="h1-responsive">SONG, ARTIST</h1>
+                        <h1 class="h1-responsive"><?php echo $countrydetails['song']?> by <?php echo $countrydetails['artist']?></h1>
                     </li>
                     <li>
                         <h1 class="h1-responsive"><div class="countdown"></div></h1>
