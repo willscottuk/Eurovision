@@ -29,16 +29,29 @@ class ControlController extends AppController
       $mode = $modearray['mode'];
 
 
+      //get current counter
+      $data['current'] = $modearray['id'];
+      //set initial value of update to false
+      $data['update'] = false;
+      //check if it's ajax call with POST containing current (for user) counter;
+      //and check if that counter is diffrent from the one in database
+      if(isset($_POST) && !empty($_POST['counter']) && (int)$_POST['counter']!=$data['current']){
+      	//the counters are diffrent so get new message list
+      	$data['update'] = true;
+      }
 
         # Return current state
+        $this->set(compact('dash'));
+        $this->set('_serialize', ['dash']);
+        $this->layout = 'ajax';
+        $this->render();
 
-        // $this->set(compact('dash'));
-        // $this->set('_serialize', ['dash']);
     }
 
 	public function initialize()
 	{
 	  parent::initialize();
+    $this->loadComponent('RequestHandler');
 		$this->Auth->allow(['index', 'view']);
 	}
     /**
