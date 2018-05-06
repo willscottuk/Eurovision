@@ -48,6 +48,42 @@ class ControlController extends AppController
 
     }
 
+    public function next()
+    {
+
+      $conn = ConnectionManager::get('default');
+      $stmt = $conn->execute("SELECT * from control ORDER BY id DESC LIMIT 1");
+      $modearray = $stmt->fetch('assoc');
+      $country_id = $modearray['country'];
+      $mode = $modearray['mode'];
+
+      # If we're at the loading stage, set country to 1 and mode to 1
+
+        if ($country_id == 0) {
+
+          $stmt2 = $conn->execute("INSERT INTO control (country, mode) VALUES (1, 1);");
+
+        }
+
+      # If we're at the voting stage for a country, set the mode to 2
+
+        elseif ($mode == 1) {
+
+          $stmt2 = $conn->execute("INSERT INTO control (country, mode) VALUES (".$country_id.", 2);");
+
+        }
+
+      # If we're at the results stage, increment the country and set the mode to 1
+
+      elseif ($mode == 2) {
+
+        $stmt2 = $conn->execute("INSERT INTO control (country, mode) VALUES (".$country_id + 1.", 1);");
+        
+      }
+
+
+    }
+
 	public function initialize()
 	{
 	  parent::initialize();
