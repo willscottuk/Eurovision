@@ -1,7 +1,3 @@
-<?php print_r($comments);?>
-<br />
-<br />
-<?php print_r($scores);?>
 <!--Carousel Wrapper-->
 <div id="carousel-example-3" class="carousel slide carousel-fade white-text" data-ride="carousel" data-interval="8000">
 
@@ -10,19 +6,28 @@
 
         <!-- First slide -->
         <div class="carousel-item active view hm-black-strong" style="background-image: url('/img/arena.jpg'); background-repeat: no-repeat; background-size: cover;">
-
+            <?php $average=round((($scores['ave_staging'] + $scores['ave_song'] + $scores['ave_singer'] + $scores['ave_overall']) /4),1); ?>
             <!-- Caption -->
             <div class="full-bg-img flex-center white-text">
                 <ul class="animated fadeInUp col-md-12">
                     <li>
-                        <h1 class="h1-responsive flex-item">Voting is open for <?php echo $countrydetails['name']?></h1>
+                        <h1 class="h1-responsive flex-item"><?php echo $countrydetails['name']?></h1>
                     </li>
                     <li>
-                        <h1 class="h1-responsive"><?php echo $countrydetails['song']?> by <?php echo $countrydetails['artist']?></h1>
+                        <h1 class="h1-responsive">Overall: <?php echo $average?></h1>
                     </li>
                     <li>
                         <br />
-                        <h1 class="h1-responsive"><div class="countdown"></div></h1>
+                        <h1 class="h1-responsive">Staging: <strong><?php echo $scores['ave_staging']; ?></strong></h1>
+                    </li>
+                    <li>
+                        <h1 class="h1-responsive">Song: <strong><?php echo $scores['ave_song']; ?></strong></h1>
+                    </li>
+                    <li>
+                        <h1 class="h1-responsive">Singer: <strong><?php echo $scores['ave_singer']; ?></strong></h1>
+                    </li>
+                    <li>
+                        <h1 class="h1-responsive">Performance: <strong><?php echo $scores['ave_overall']; ?></strong></h1>
                     </li>
                 </ul>
             </div>
