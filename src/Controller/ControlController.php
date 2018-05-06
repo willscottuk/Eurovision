@@ -22,10 +22,16 @@ class ControlController extends AppController
     public function index()
     {
 
+      $conn = ConnectionManager::get('default');
+      $stmt = $conn->execute("SELECT * from control ORDER BY id DESC LIMIT 1");
+      $mode = $stmt->fetchAll('assoc');
+
+      return(print_r($mode););
+
         # Return current state
 
-        $this->set(compact('dash'));
-        $this->set('_serialize', ['dash']);
+        // $this->set(compact('dash'));
+        // $this->set('_serialize', ['dash']);
     }
 
 	public function initialize()
