@@ -51,7 +51,7 @@
 }
 else { ?>
 <div class="footer">
-  <h3 class="comments"><marquee>Comments: <?php foreach ($comments as $comment) { echo $comment['comments'];} ?></marquee></h3>
+  <h2 class="comments"><marquee>Comments: <?php foreach ($comments as $comment) { echo $comment['comments'];} ?></marquee></h3>
 </div>
 <?php
 }
