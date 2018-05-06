@@ -22,11 +22,13 @@ class ScreenController extends AppController
     public function index()
     {
 
-        # Pre-load: Get Control ID & Mode.
+        # Pre-load: Get Control ID & Mode as well as settings
 
         $conn = ConnectionManager::get('default');
         $stmt = $conn->execute("SELECT * from control ORDER BY id DESC LIMIT 1");
         $modearray = $stmt->fetch('assoc');
+        $stmt2 = $conn->execute("SELECT * from settings");
+        $settings = $stmt->fetchAll('assoc');
         $country_id = $modearray['country'];
         $mode = $modearray['mode'];
 
@@ -35,8 +37,8 @@ class ScreenController extends AppController
         if ($country_id == 0) {
 
           # Return current state
-          $this->set(compact('modearray'));
-          $this->set('_serialize', ['modearray']);
+          $this->set(compact('modearray', 'settings'));
+          $this->set('_serialize', ['modearray', 'settings']);
           $this->viewBuilder()->setLayout('screen');
           $this->render('loading');
 
@@ -46,8 +48,8 @@ class ScreenController extends AppController
 
         elseif ($country_id > 0 && $mode == 1) {
 
-          $this->set(compact('modearray'));
-          $this->set('_serialize', ['modearray']);
+          $this->set(compact('modearray', 'settings'));
+          $this->set('_serialize', ['modearray', 'settings']);
           $this->viewBuilder()->setLayout('screen');
           $this->render('voting');
 
@@ -58,8 +60,8 @@ class ScreenController extends AppController
         elseif ($country_id > 0 && $mode == 2) {
 
 
-          $this->set(compact('modearray'));
-          $this->set('_serialize', ['modearray']);
+          $this->set(compact('modearray', 'settings'));
+          $this->set('_serialize', ['modearray', 'settings']);
           $this->viewBuilder()->setLayout('screen');
           $this->render('results');
 
