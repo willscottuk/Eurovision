@@ -47,5 +47,5 @@
 </div>
 <!--/.Carousel Wrapper-->
 <div class="footer">
-  FOOOTER
+  <h3><marquee>Comments: here are the comments</marquee></h3>
 </div>

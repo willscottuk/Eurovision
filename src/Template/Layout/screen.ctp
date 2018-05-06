@@ -58,7 +58,7 @@ $cakeDescription = 'Eurovision';
         width: 100%;
         height: 60px; /* Set the fixed height of the footer here */
         line-height: 60px; /* Vertically center the text there */
-        background-color: #f5f5f5;
+        background-color: rgba(51,51,51,0.5);
       }
 
         @media only screen and (max-width: 768px) {
