@@ -7,11 +7,11 @@ use Cake\Datasource\ConnectionManager;
 
 
 /**
- * Screen Controller
+ * Control Controller
  *
- * @property \App\Model\Table\ScreenTable $Screen
+ * @property \App\Model\Table\ControlTable $Control
  */
-class ScreenController extends AppController
+class ControlController extends AppController
 {
 
     /**
@@ -36,7 +36,7 @@ class ScreenController extends AppController
     /**
      * God mode method
      *
-     * @param string|null $id Screen id.
+     * @param string|null $id Control id.
      * @return \Cake\Network\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
