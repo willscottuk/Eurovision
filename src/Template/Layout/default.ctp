@@ -77,7 +77,7 @@ $cakeDescription = 'Eurovision 2017';
         }
 
         .view {
-            background: url("https://kiev.willscott.org/img/arena.jpg")no-repeat center center fixed;
+            background: url("/img/arena.jpg")no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
