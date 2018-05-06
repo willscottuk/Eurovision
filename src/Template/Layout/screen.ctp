@@ -58,8 +58,12 @@ $cakeDescription = 'Eurovision';
         width: 100%;
         height: 60px; /* Set the fixed height of the footer here */
         line-height: 60px; /* Vertically center the text there */
-        background-color: rgba(51,51,51,0.5);
-      }
+        background-color: rgba(51,51,51,0.7);
+        }
+
+        h3.comments {
+          color: #fff;
+        }
 
         @media only screen and (max-width: 768px) {
             .navbar {

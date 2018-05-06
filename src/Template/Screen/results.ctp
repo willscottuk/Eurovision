@@ -46,6 +46,13 @@
     <!--/.Controls-->
 </div>
 <!--/.Carousel Wrapper-->
+<?php if (empty($votecomments)) {
+
+}
+else { ?>
 <div class="footer">
-  <h3><marquee>Comments: here are the comments</marquee></h3>
+  <h3 class="comments"><marquee>Comments: <?php foreach ($comments as $comment) { echo $comment['comments'];} ?></marquee></h3>
 </div>
+<?php
+}
+?>
