@@ -52,8 +52,11 @@ class ScreenController extends AppController
 
         elseif ($country_id > 0 && $mode == 1) {
 
-          $this->set(compact('modearray', 'settings'));
-          $this->set('_serialize', ['modearray', 'settings']);
+          $stmt3 = $conn->execute("SELECT * FROM `countries` WHERE position = ".$country_id." ORDER BY position ASC");
+          $countrydetails = $stmt3->fetch('assoc');
+
+          $this->set(compact('modearray', 'settings', 'countrydetails'));
+          $this->set('_serialize', ['modearray', 'settings', 'countrydetails']);
           $this->viewBuilder()->setLayout('screen');
           $this->render('voting');
 

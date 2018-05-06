@@ -1,3 +1,4 @@
+<?php print_r($countrydetails); ?>
 <!--Carousel Wrapper-->
 <div id="carousel-example-3" class="carousel slide carousel-fade white-text" data-ride="carousel" data-interval="8000">
     <!--Indicators-->
