@@ -134,8 +134,6 @@ $cakeDescription = 'Eurovision';
 	</header>
   <div id="counter" data-counter="<?php echo $modearray['id']; ?>"> </div>
         <?= $this->fetch('content') ?>
-    </div>
-    </div>
     <footer>
 	    <?= $this->Flash->render() ?>
     </footer>
