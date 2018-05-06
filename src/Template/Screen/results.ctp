@@ -126,5 +126,5 @@ else { ?>
     };
 })(jQuery);
 
-$('.comments').marquee({ speed: 5 });
+$('.comments').marquee({ speed: 5, count: 1});
 </script>
