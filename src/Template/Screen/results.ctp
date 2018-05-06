@@ -44,8 +44,8 @@
         <span class="sr-only">Next</span>
     </a>
     <!--/.Controls-->
+    <footer class="page-footer">
+      footer
+    </footer>
 </div>
 <!--/.Carousel Wrapper-->
-<footer class="page-footer">
-  footer
-</footer>
