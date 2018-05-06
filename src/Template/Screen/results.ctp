@@ -2,16 +2,8 @@
 <br />
 <br />
 <?php print_r($scores);?>
-<br />
-<br />
-<?php print_r($countrydetails);?>
 <!--Carousel Wrapper-->
 <div id="carousel-example-3" class="carousel slide carousel-fade white-text" data-ride="carousel" data-interval="8000">
-    <!--Indicators-->
-    <div class="carousel-indicators" style="width: 100%; background-color:#FFF;">
-        HELLO! THIS IS THE CAROUSEL
-    </div>
-    <!--/.Indicators-->
 
     <!--Slides-->
     <div class="carousel-inner" role="listbox">
@@ -54,7 +46,6 @@
     <!--/.Controls-->
 </div>
 <!--/.Carousel Wrapper-->
-
-<footer>
-  Footer text
+<footer class="page-footer">
+  footer
 </footer>
