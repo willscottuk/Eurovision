@@ -112,9 +112,9 @@ $cakeDescription = 'Eurovision';
   				}
   			}).done(function( response ) {
   				/* update counter */
-  				$('#counter').data('counter',response.current);
+  				$('#counter').data('counter',response.data.current);
   				/* check if with response we got a new update */
-  				if(response.update==true){
+  				if(response.data.update==true){
   					// $('#message-list').html(response.news);
             location.reload();
   				}
