@@ -19,7 +19,7 @@
                     else { ?>
                       <?php foreach ($comments as $comment) { ?>
                       <li>
-                          <h3 class="h3-responsive"><?php echo $comment['comments']; ?></h3>
+                          <h2 class="h2-responsive"><?php echo $comment['comments']; ?></h2>
                       </li>
                     <?php
                     }
@@ -48,7 +48,7 @@
 </div>
 <!--/.Carousel Wrapper-->
 <div class="footer">
-  <h2 class="scores">Staging: <strong><?php echo $scores['ave_staging']; ?></strong>  Song: <strong><?php echo $scores['ave_song']; ?></strong>  Singer: <strong><?php echo $scores['ave_singer']; ?></strong>  Performance: <strong><?php echo $scores['ave_overall']; ?></strong></h2>
+  <h1 class="scores">Staging: <strong><?php echo $scores['ave_staging']; ?></strong> &nbsp;&nbsp;&nbsp;&nbsp; Song: <strong><?php echo $scores['ave_song']; ?></strong> &nbsp;&nbsp;&nbsp;&nbsp; Singer: <strong><?php echo $scores['ave_singer'];?></strong> &nbsp;&nbsp;&nbsp;&nbsp; Performance: <strong><?php echo $scores['ave_overall']; ?></strong></h1>
 </div>
 <script>
 (function($) {
