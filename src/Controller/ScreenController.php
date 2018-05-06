@@ -28,7 +28,7 @@ class ScreenController extends AppController
         $stmt = $conn->execute("SELECT * from control ORDER BY id DESC LIMIT 1");
         $modearray = $stmt->fetch('assoc');
         $stmt2 = $conn->execute("SELECT * from settings");
-        $settings = $stmt->fetchAll('assoc');
+        $settings = $stmt2->fetchAll('assoc');
         $country_id = $modearray['country'];
         $mode = $modearray['mode'];
 
