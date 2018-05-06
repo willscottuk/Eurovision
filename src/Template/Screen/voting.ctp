@@ -16,7 +16,7 @@
             <div class="full-bg-img flex-center white-text">
                 <ul class="animated fadeInUp col-md-12">
                     <li>
-                        <h1 class="h1-responsive flex-item">Voting is open for <img src="/img/flags-iso/flat/32/<?PHP echo $countrydetails['flag']; ?>.png" alt="<?PHP echo $countrydetails['name']; ?>"/><?php echo $countrydetails['name']?></h1>
+                        <h1 class="h1-responsive flex-item">Voting is open for <?php echo $countrydetails['name']?></h1>
                     </li>
                     <li>
                         <h1 class="h1-responsive"><?php echo $countrydetails['song']?> by <?php echo $countrydetails['artist']?></h1>
