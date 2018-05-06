@@ -70,10 +70,10 @@ class ScreenController extends AppController
       		$comments = $stmt4->fetchAll('assoc');
 
       		$stmt5 = $conn->execute("SELECT ROUND( AVG(votes.overall_score),1 ) as ave_overall, ROUND( AVG(votes.song_score),1 ) as ave_song, ROUND( AVG(votes.singer_score),1 ) as ave_singer, ROUND( AVG(votes.staging_score),1 ) as ave_staging FROM `countries` LEFT JOIN `votes` ON votes.country_id = countries.id WHERE countries.position = ".$country_id." ORDER BY position ASC");
-      		$scores = $stmt5->fetchAll('assoc');
+      		$scores = $stmt5->fetch('assoc');
 
       		$stmt6 = $conn->execute("SELECT * FROM `countries` WHERE position = ".$country_id." ORDER BY position ASC");
-      		$countrydetails = $stmt6->fetchAll('assoc');
+      		$countrydetails = $stmt6->fetch('assoc');
 
           $this->set(compact('modearray', 'settings', 'comments', 'scores', 'countrydetails'));
           $this->set('_serialize', ['modearray', 'settings', 'comments', 'scores', 'countrydetails']);
