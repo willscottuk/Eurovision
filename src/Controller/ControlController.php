@@ -41,9 +41,9 @@ class ControlController extends AppController
       }
 
         # Return current state
-        $this->set(compact('dash'));
-        $this->set('_serialize', ['dash']);
-        $this->layout = 'ajax';
+        $this->set(compact('data'));
+        $this->set('_serialize', ['data']);
+        $this->viewBuilder()->setLayout('ajax')
         $this->render();
 
     }
