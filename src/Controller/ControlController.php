@@ -83,6 +83,8 @@ class ControlController extends AppController
 
       }
 
+      $this->viewBuilder()->setLayout('ajax');
+      $this->render(false);
 
     }
 
