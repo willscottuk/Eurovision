@@ -25,10 +25,10 @@ class ControlController extends AppController
       $conn = ConnectionManager::get('default');
       $stmt = $conn->execute("SELECT * from control ORDER BY id DESC LIMIT 1");
       $modearray = $stmt->fetch('assoc');
-
       $country_id = $modearray['country'];
       $mode = $modearray['mode'];
-      return(print($mode));
+
+
 
         # Return current state
 
@@ -54,11 +54,13 @@ class ControlController extends AppController
       # Get current mode
 
       $conn = ConnectionManager::get('default');
-  		$stmt = $conn->execute("SELECT * from control ORDER BY id DESC LIMIT 1");
-  		$mode = $stmt->fetchAll('assoc');
+      $stmt = $conn->execute("SELECT * from control ORDER BY id DESC LIMIT 1");
+      $modearray = $stmt->fetch('assoc');
+      $country_id = $modearray['country'];
+      $mode = $modearray['mode'];
 
-        $this->set(compact('mode'));
-        $this->set('_serialize', ['mode']);
+        $this->set(compact('modearray'));
+        $this->set('_serialize', ['modearray']);
     }
 
     public function isAuthorized($user)

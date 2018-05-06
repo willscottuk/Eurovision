@@ -25,21 +25,44 @@ class ScreenController extends AppController
         # Pre-load: Get Control ID & Mode.
 
         $conn = ConnectionManager::get('default');
-    		$stmt = $conn->execute("SELECT * from control ORDER BY id DESC LIMIT 1");
-    		$mode = $stmt->fetchAll('assoc');
+        $stmt = $conn->execute("SELECT * from control ORDER BY id DESC LIMIT 1");
+        $modearray = $stmt->fetch('assoc');
+        $country_id = $modearray['country'];
+        $mode = $modearray['mode'];
 
         # Method 1: If Control ID is 0, set loading screen.
 
+        if ($country_id == 0) {
+
+          $this->render('loading');
+
+        }
 
         # Method 2: If Control ID > 0 and Control Mode = vote, set vote screen.
 
+        elseif ($country_id > 0 && $mode == 1) {
+
+        $this->set(compact('modearray'));
+        $this->set('_serialize', ['modearray']);
+        $this->render('voting');
+
+        }
 
         # Method 3: If Control ID > 0 and Control Mode = results, set results screen.
 
+        elseif ($country_id > 0 && $mode == 2) {
 
 
-        $this->set(compact('dash'));
-        $this->set('_serialize', ['dash']);
+          $this->set(compact('modearray'));
+          $this->set('_serialize', ['modearray']);
+          $this->render('results');
+
+        }
+
+
+        else {
+          throw new NotFoundException();
+        }
     }
 
 	public function initialize()
