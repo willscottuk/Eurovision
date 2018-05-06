@@ -34,8 +34,7 @@
 					        ?>
 											<div class="input textarea">
 												<label for="comments">Comments</label>
-												<textarea onKeyDown="limitText(this.form.limitedtextarea,this.form.countdown,50);" onKeyUp="limitText(this.form.limitedtextarea,this.form.countdown,50);" name="comments" id="comments" rows="5">
-												</textarea>
+												<textarea onKeyDown="limitText(this.form.limitedtextarea,this.form.countdown,50);" onKeyUp="limitText(this.form.limitedtextarea,this.form.countdown,50);" name="comments" id="comments" rows="5"></textarea>
 												<br>
 												<font size="1">(Maximum characters: 50)<br>You have <input readonly type="text" name="countdown" size="3" value="50"> characters left.</font>
 											</div>
