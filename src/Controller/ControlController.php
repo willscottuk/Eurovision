@@ -119,7 +119,7 @@ class ControlController extends AppController
 	    $action = $this->request->getParam('action');
 
 	    // The add and index actions are always allowed.
-	    if (in_array($action, ['index', 'view', 'tags'])) {
+	    if (in_array($action, ['index', 'view', 'next'])) {
 	        return true;
 	    }
 	}
