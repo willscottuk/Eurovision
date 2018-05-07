@@ -115,5 +115,5 @@
     };
 })(jQuery);
 
-$('.scores').marquee({ speed: 5, count: 1});
+$('.scoresmarquee').marquee({ speed: 5, count: 1});
 </script>
