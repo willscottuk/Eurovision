@@ -48,7 +48,7 @@
 </div>
 <!--/.Carousel Wrapper-->
 <div class="footer">
-  <h1 class="scores">Staging: <strong><?php echo $scores['ave_staging']; ?></strong> &nbsp;&nbsp;&nbsp;&nbsp; Song: <strong><?php echo $scores['ave_song']; ?></strong> &nbsp;&nbsp;&nbsp;&nbsp; Singer: <strong><?php echo $scores['ave_singer'];?></strong> &nbsp;&nbsp;&nbsp;&nbsp; Performance: <strong><?php echo $scores['ave_overall']; ?></strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+  <h1 class="scores">Staging: <strong><?php echo $scores['ave_staging']; ?></strong> &nbsp;&nbsp;&nbsp;&nbsp; Song: <strong><?php echo $scores['ave_song']; ?></strong> &nbsp;&nbsp;&nbsp;&nbsp; Singer: <strong><?php echo $scores['ave_singer'];?></strong> &nbsp;&nbsp;&nbsp;&nbsp; Performance: <strong><?php echo $scores['ave_overall']; ?></strong></h1>
 </div>
 <script>
 (function($) {
