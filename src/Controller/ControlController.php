@@ -88,6 +88,12 @@ class ControlController extends AppController
 
     }
 
+    public function god() {
+
+
+      
+    }
+
 	public function initialize()
 	{
 	  parent::initialize();
