@@ -9,28 +9,25 @@
   		<p>A few beers were harmed in the making of this "version 2".</p>
     </div>
 
-    <!--Footer-->
     <div class="modal-footer">
         <div class="options">
 		        Will Scott, MMXVIII
         </div>
     </div>
 </div>
-<br />
-<div class="card">
+<!-- <div class="card">
     <div class="card-block">
   		<h1>Once upon a time...</h1>
   		<p>Once upon a time, Daniel promised his friends that there would be a Eurovision 'app' for this year's party. Will was not aware of this promise...</p>
   		<p>This is the product of Will's weekend, a couple of beers and a fair amount of swearing.</p>
     </div>
 
-    <!--Footer-->
     <div class="modal-footer">
         <div class="options">
 		        Will Scott, MMXVII
         </div>
     </div>
-</div>
+</div> -->
 </div>
 </div>
 

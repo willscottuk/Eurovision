@@ -50,7 +50,7 @@
         <!-- /.Second slide -->
 
         <!-- Third slide -->
-        <div class="carousel-item view hm-black-strong" style="background-image: url('/img/backgrounds/GB.jpeg'); background-repeat: no-repeat; background-size: cover;">
+        <div class="carousel-item view hm-black-strong" style="background-image: url('/img/arena2.jpg'); background-repeat: no-repeat; background-size: cover;">
 
             <!-- Caption -->
             <div class="full-bg-img flex-center white-text">

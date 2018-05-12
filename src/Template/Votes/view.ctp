@@ -28,7 +28,7 @@
             <td><?= $this->Number->format($vote->song_score) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Singer Score') ?></th>
+            <th scope="row"><?= __('Would you?') ?></th>
             <td><?= $this->Number->format($vote->singer_score) ?></td>
         </tr>
         <tr>

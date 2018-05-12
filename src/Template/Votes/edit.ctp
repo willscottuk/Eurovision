@@ -8,12 +8,12 @@
 		<div class="col-12">
 			<div class="card" style="min-width: 30%;">
 			    <div class="card-block">
-			
+
 			        <!--Header-->
 			        <div class="form-header primary-color">
 			            <h3><i class="fa fa-star"></i>  Rate the act</h3>
 			        </div>
-			
+
 			        <!--Body-->
 
 					    <?= $this->Form->create($vote) ?>
@@ -27,7 +27,7 @@
 					            echo $this->Form->select('overall_score', $options, ['class' => 'form-control', 'empty' => true]);
 					            echo $this->Form->label('song_score', 'Song score (/12)');
 					            echo $this->Form->select('song_score', $options, ['class' => 'form-control', 'empty' => true]);
-					            echo $this->Form->label('singer_score', 'Singer score (/12)');
+					            echo $this->Form->label('singer_score', 'Would you? (/12)');
 					            echo $this->Form->select('singer_score', $options, ['class' => 'form-control', 'empty' => true]);
 					            echo $this->Form->label('staging_score', 'Staging score (/12)');
 					            echo $this->Form->select('staging_score', $options, ['class' => 'form-control', 'empty' => true]);
