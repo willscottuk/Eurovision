@@ -71,7 +71,7 @@ class UsersController extends AppController
               $authUser = $this->Users->get($result->id)->toArray();
   		        // Log user in using Auth
   		      $this->Auth->setUser($authUser);
-              $this->Flash->success(__('Account Created!'));
+              return $this->redirect(['controller' => 'Home','action' => 'index']);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
@@ -140,22 +140,22 @@ class UsersController extends AppController
 	    parent::initialize();
 		$this->Auth->allow(['logout', 'register']);
 	}
-	
+
 	public function logout()
 	{
 	    $this->Flash->success('You are now logged out.');
 	    return $this->redirect($this->Auth->logout());
 	}
-	
+
 	public function isAuthorized($user)
 	{
 	    $action = $this->request->getParam('action');
-	
+
 	    // The add and index actions are always allowed.
 	    if (in_array($action, ['add', 'tags'])) {
 	        return true;
 	    }
-	
+
 	    // Check that the bookmark belongs to the current user.
 	    $id = $this->request->getParam('pass.0');
 	    if ("1" == $user['id']) {
