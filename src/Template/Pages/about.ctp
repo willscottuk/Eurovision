@@ -16,6 +16,7 @@
         </div>
     </div>
 </div>
+<br />
 <div class="card">
     <div class="card-block">
   		<h1>Once upon a time...</h1>
