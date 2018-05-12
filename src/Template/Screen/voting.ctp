@@ -1,4 +1,12 @@
 <!--Carousel Wrapper-->
+# @Author: Will Scott <willscott>
+# @Date:   06/05/2018 14:40
+# @Project: Ambassadr Home Automation
+# @Last modified by:   willscott
+# @Last modified time: 12/05/2018 15:07
+
+
+
 <div id="carousel-example-3" class="carousel slide carousel-fade white-text" data-ride="carousel" data-interval="8000">
     <!--Indicators-->
     <ol class="carousel-indicators">
@@ -50,7 +58,7 @@
 
 
 <script>
-var timer2 = "3:00";
+var timer2 = "1:00";
 var interval = setInterval(function() {
 var timer = timer2.split(':');
 //by parsing integer, I avoid all extra string processing
