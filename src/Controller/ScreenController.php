@@ -88,6 +88,23 @@ class ScreenController extends AppController
         }
     }
 
+  public function leaderboard()
+  {
+
+    $conn = ConnectionManager::get('default');
+
+    $stmt = $conn->execute("SELECT countries.id as country_id, countries.name, countries.flag, countries.position, ROUND( AVG(votes.overall_score),1 ) as ave_overall, ROUND( AVG(votes.song_score),1 ) as ave_song, ROUND( AVG(votes.singer_score),1 ) as ave_singer, ROUND( AVG(votes.staging_score),1 ) as ave_staging, ROUND((AVG(votes.overall_score)+AVG(votes.song_score)+AVG(votes.singer_score)+AVG(votes.staging_score))/4,1) as final_score FROM `countries` LEFT JOIN `votes` ON votes.country_id = countries.id WHERE countries.position IS NOT NULL GROUP BY countries.id ORDER BY final_score DESC LIMIT 10");
+
+    $leaderboard = $stmt->fetchAll('assoc');
+
+    $this->set(compact('leaderboard'));
+    $this->set('_serialize', ['leaderboard']);
+    $this->viewBuilder()->setLayout('screen');
+    $this->render('leaderboard');
+
+
+  }
+
 	public function initialize()
 	{
 	  parent::initialize();
