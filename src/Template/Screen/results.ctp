@@ -11,7 +11,7 @@
             <div class="full-bg-img flex-center white-text">
                 <ul class="animated fadeInUp col-md-12">
                     <li>
-                        <h1 class="h1-responsive flex-item"><?php echo $countrydetails['name']?>: <?php echo $average?></h1>
+                        <h1 class="flex-item"><?php echo $countrydetails['name']?>: <?php echo $average?></h1>
                     </li>
                     <?php if (empty($comments)) {
 
