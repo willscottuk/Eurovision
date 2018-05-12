@@ -90,8 +90,17 @@ class ControlController extends AppController
 
     public function god() {
 
+      # Get current mode
 
-      
+      $conn = ConnectionManager::get('default');
+      $stmt = $conn->execute("SELECT * from control ORDER BY id DESC LIMIT 1");
+      $modearray = $stmt->fetch('assoc');
+      $country_id = $modearray['country'];
+      $mode = $modearray['mode'];
+
+        $this->set(compact('modearray'));
+        $this->set('_serialize', ['modearray']);
+
     }
 
 	public function initialize()
@@ -107,20 +116,6 @@ class ControlController extends AppController
      * @return \Cake\Network\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function godmode()
-    {
-
-      # Get current mode
-
-      $conn = ConnectionManager::get('default');
-      $stmt = $conn->execute("SELECT * from control ORDER BY id DESC LIMIT 1");
-      $modearray = $stmt->fetch('assoc');
-      $country_id = $modearray['country'];
-      $mode = $modearray['mode'];
-
-        $this->set(compact('modearray'));
-        $this->set('_serialize', ['modearray']);
-    }
 
     public function isAuthorized($user)
 	{
