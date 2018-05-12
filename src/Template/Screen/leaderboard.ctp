@@ -10,7 +10,7 @@
             <div class="full-bg-img flex-center white-text">
                 <ul class="animated fadeInUp col-md-12">
                     <li>
-                        <table class="table table-striped table-bordered table-responsive">
+                        <table class="table table-striped table-bordered">
                           <thead class="thead-dark">
                           <tr>
                             <th>Points</th>
