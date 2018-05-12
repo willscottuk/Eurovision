@@ -27,10 +27,10 @@
 					            echo $this->Form->select('overall_score', $options, ['class' => 'form-control', 'empty' => true]);
 					            echo $this->Form->label('song_score', 'Song score (/12)');
 					            echo $this->Form->select('song_score', $options, ['class' => 'form-control', 'empty' => true]);
-					            echo $this->Form->label('singer_score', 'Would you? (/12)');
-					            echo $this->Form->select('singer_score', $options, ['class' => 'form-control', 'empty' => true]);
 					            echo $this->Form->label('staging_score', 'Staging score (/12)');
 					            echo $this->Form->select('staging_score', $options, ['class' => 'form-control', 'empty' => true]);
+											echo $this->Form->label('singer_score', 'Would you? (/12)');
+					            echo $this->Form->select('singer_score', $options, ['class' => 'form-control', 'empty' => true]);
 					        ?>
 											<div class="input textarea">
 												<label for="comments">Comments</label>
