@@ -10,12 +10,15 @@
             <div class="full-bg-img flex-center white-text">
                 <ul class="animated fadeInUp col-md-12">
                     <li>
-                        <table class="table">
+                        <table class="table table-striped table-bordered table-responsive">
+                          <thead class="thead-dark">
                           <tr>
                             <th>Points</th>
                             <th>Country</th>
                             <th>Score</th>
                           </tr>
+                          </thead>
+                          <tbody>
                           <tr>
                             <td>12</td>
                             <td><?php echo $leaderboard['0']['name']; ?></td>
@@ -66,6 +69,7 @@
                             <td><?php echo $leaderboard['9']['name']; ?></td>
                             <td><?php echo $leaderboard['9']['final_score']; ?></td>
                           </tr>
+                          </tbody>
                         </table>
                     </li>
                 </ul>
