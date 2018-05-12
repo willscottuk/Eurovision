@@ -52,6 +52,8 @@ class ScreenController extends AppController
 
         elseif ($country_id == 27 && $mode == 1) {
 
+          $this->set(compact('modearray', 'settings'));
+          $this->set('_serialize', ['modearray', 'settings']);
           $this->viewBuilder()->setLayout('screen');
           $this->render('countdown');
 
