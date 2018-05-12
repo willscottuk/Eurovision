@@ -25,49 +25,49 @@
                             <td><h3><?php echo $leaderboard['0']['final_score']; ?></h3></td>
                           </tr>
                           <tr>
-                            <td>10</td>
-                            <td><?php echo $leaderboard['1']['name']; ?></td>
-                            <td><?php echo $leaderboard['1']['final_score']; ?></td>
+                            <td><h3>10</h3></td>
+                            <td><h3><?php echo $leaderboard['1']['name']; ?></h3></td>
+                            <td><h3><?php echo $leaderboard['1']['final_score']; ?></h3></td>
                           </tr>
                           <tr>
-                            <td>8</td>
-                            <td><?php echo $leaderboard['2']['name']; ?></td>
-                            <td><?php echo $leaderboard['2']['final_score']; ?></td>
+                            <td><h3>8</h3></td>
+                            <td><h3><?php echo $leaderboard['2']['name']; ?></h3></td>
+                            <td><h3><?php echo $leaderboard['2']['final_score']; ?></h3></td>
                           </tr>
                           <tr>
-                            <td>7</td>
-                            <td><?php echo $leaderboard['3']['name']; ?></td>
-                            <td><?php echo $leaderboard['3']['final_score']; ?></td>
+                            <td><h3>7</h3></td>
+                            <td><h3><?php echo $leaderboard['3']['name']; ?></h3></td>
+                            <td><h3><?php echo $leaderboard['3']['final_score']; ?></h3></td>
                           </tr>
                           <tr>
-                            <td>6</td>
-                            <td><?php echo $leaderboard['4']['name']; ?></td>
-                            <td><?php echo $leaderboard['4']['final_score']; ?></td>
+                            <td><h3>6</h3></td>
+                            <td><h3><?php echo $leaderboard['4']['name']; ?></h3></td>
+                            <td><h3><?php echo $leaderboard['4']['final_score']; ?></h3></td>
                           </tr>
                           <tr>
-                            <td>5</td>
-                            <td><?php echo $leaderboard['5']['name']; ?></td>
-                            <td><?php echo $leaderboard['5']['final_score']; ?></td>
+                            <td><h3>5</h3></td>
+                            <td><h3><?php echo $leaderboard['5']['name']; ?></h3></td>
+                            <td><h3><?php echo $leaderboard['5']['final_score']; ?></h3></td>
                           </tr>
                           <tr>
-                            <td>4</td>
-                            <td><?php echo $leaderboard['6']['name']; ?></td>
-                            <td><?php echo $leaderboard['6']['final_score']; ?></td>
+                            <td><h3>4</h3></td>
+                            <td><h3><?php echo $leaderboard['6']['name']; ?></h3></td>
+                            <td><h3><?php echo $leaderboard['6']['final_score']; ?></h3></td>
                           </tr>
                           <tr>
-                            <td>3</td>
-                            <td><?php echo $leaderboard['7']['name']; ?></td>
-                            <td><?php echo $leaderboard['7']['final_score']; ?></td>
+                            <td><h3>3</h3></td>
+                            <td><h3><?php echo $leaderboard['7']['name']; ?></h3></td>
+                            <td><h3><?php echo $leaderboard['7']['final_score']; ?></h3></td>
                           </tr>
                           <tr>
-                            <td>2</td>
-                            <td><?php echo $leaderboard['8']['name']; ?></td>
-                            <td><?php echo $leaderboard['8']['final_score']; ?></td>
+                            <td><h3>2</h3></td>
+                            <td><h3><?php echo $leaderboard['8']['name']; ?></h3></td>
+                            <td><h3><?php echo $leaderboard['8']['final_score']; ?></h3></td>
                           </tr>
                           <tr>
-                            <td>1</td>
-                            <td><?php echo $leaderboard['9']['name']; ?></td>
-                            <td><?php echo $leaderboard['9']['final_score']; ?></td>
+                            <td><h3>1</h3></td>
+                            <td><h3><?php echo $leaderboard['9']['name']; ?></h3></td>
+                            <td><h3><?php echo $leaderboard['9']['final_score']; ?></h3></td>
                           </tr>
                           </tbody>
                         </table>
