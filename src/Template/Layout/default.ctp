@@ -32,6 +32,9 @@ $cakeDescription = 'Eurovision';
     <?= $this->Html->css('bootstrap.min.css') ?>
     <?= $this->Html->css('mdb.min.css') ?>
 
+    <?= $this->Html->script('jquery-2.2.3.min.js') ?>
+
+
     <style rel="stylesheet">
         /* TEMPLATE STYLES */
 
@@ -155,7 +158,6 @@ $cakeDescription = 'Eurovision';
 	    <?= $this->Flash->render() ?>
     </footer>
 
-     <?= $this->Html->script('jquery-2.2.3.min.js') ?>
      <?= $this->Html->script('tether.min.js') ?>
      <?= $this->Html->script('bootstrap.min.js') ?>
      <?= $this->Html->script('mdb.min.js') ?>
