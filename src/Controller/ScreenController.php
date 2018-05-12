@@ -70,8 +70,8 @@ class ScreenController extends AppController
 
           $leaderboard = $stmt->fetchAll('assoc');
 
-          $this->set(compact('leaderboard'));
-          $this->set('_serialize', ['leaderboard']);
+          $this->set(compact('modearray', 'settings', 'leaderboard'));
+          $this->set('_serialize', ['modearray', 'settings', 'leaderboard']);
           $this->viewBuilder()->setLayout('screen');
           $this->render('leaderboard');
 
