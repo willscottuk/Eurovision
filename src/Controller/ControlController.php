@@ -108,7 +108,7 @@ class ControlController extends AppController
 	{
 	  parent::initialize();
     $this->loadComponent('RequestHandler');
-		$this->Auth->allow(['index', 'view']);
+		$this->Auth->allow(['index', 'view', 'next']);
 	}
     /**
      * God mode method
