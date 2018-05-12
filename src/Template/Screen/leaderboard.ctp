@@ -11,11 +11,11 @@
                 <ul class="animated fadeInUp col-md-12">
                     <li>
                         <table class="table table-bordered">
-                          <thead class="">
+                          <thead>
                           <tr>
-                            <th><h2>Points</h2></th>
-                            <th>Country</th>
-                            <th>Score</th>
+                            <th align="center" style="text-align:center;"><h2>Points</h2></th>
+                            <th align="center" style="text-align:center;"><h2>Country</h2></th>
+                            <th align="center" style="text-align:center;"><h2>Score</h2></th>
                           </tr>
                           </thead>
                           <tbody>
