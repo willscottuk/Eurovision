@@ -65,6 +65,10 @@ $('.countdown').html(minutes + ':' + seconds);
 if (minutes < 0) clearInterval(interval);
 //check if both minutes and seconds are 0
 if ((seconds <= 0) && (minutes <= 0)) clearInterval(interval);
+if ((seconds <= 0) && (minutes <= 0)) $.ajax({
+  type: 'POST',
+  url: '/control/next',
+});
 timer2 = minutes + ':' + seconds;
 }, 1000);
 </script>
