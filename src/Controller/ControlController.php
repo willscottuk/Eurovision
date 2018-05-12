@@ -88,7 +88,8 @@ class ControlController extends AppController
 
     }
 
-    public function god() {
+    public function god()
+    {
 
       # Get current mode
 
@@ -122,7 +123,7 @@ class ControlController extends AppController
 	    $action = $this->request->getParam('action');
 
 	    // The add and index actions are always allowed.
-	    if (in_array($action, ['index', 'view', 'next'])) {
+	    if (in_array($action, ['index', 'view', 'next', 'god'])) {
 	        return true;
 	    }
 	}
